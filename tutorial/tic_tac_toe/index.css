@@ -1,0 +1,34 @@
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 20px;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    width: 34px;
+    height: 34px;
+    margin: -1px -1px 0px 0px;
+    padding: 0;
+    border: 1px solid #999999;
+    background: #ffffff;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 34px;
+    text-align: center;
+    float: left;
+}
+
+.square.selected {
+    font-weight: bold;
+}
+
+.square.win-square {
+    background-color: #00ff00;
+}
