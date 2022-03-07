@@ -1,0 +1,66 @@
+.button.is-success {
+    border-color: transparent;
+    background-color: #48c78e;
+    color: #ffffff;
+}
+
+.has-text-gray-lighter {
+    color: #dbdbdb!important;
+}
+
+.is-clickable {
+    cursor: pointer!important;
+    pointer-events: all!important;
+}
+
+.select {
+    position: relative;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.select select {
+    max-width: 100%;
+    font-size: 1em;
+    display: block;
+    cursor: pointer;
+    outline: 0;
+}
+
+.select select:not([multiple]) {
+    padding-right: 2.5em;
+}
+
+.select.is-small {
+    border-radius: 2px;
+    font-size: .75rem;;
+}
+
+.select:not(.is-multiple) {
+    height: 2.5em;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+    right: 1.125em;
+    border-color: #485fc7;
+    z-index: 4;
+}
+
+.image.is-16by9 {
+    padding-top: 56.25%;
+}
+
+.my-3 {
+    margin-top: 0.75rem!important;
+    margin-bottom: 0.75rem!important;
+}
+
+.mt-1 {
+    padding-top: 0.25rem!important;
+}
+
+.wh-4 {
+    width: 1.5rem;
+    height: 1.5rem;
+}

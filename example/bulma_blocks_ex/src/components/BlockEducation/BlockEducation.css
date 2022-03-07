@@ -1,0 +1,57 @@
+.button.is-link {
+    border-color: transparent;
+    background-color: #485fc7;
+    color: #ffffff;
+}
+
+.field.is-grouped.is-grouped-centered {
+    justify-content: center;
+}
+
+.edu-search-input {
+    width: 450px;
+}
+
+.insti-div {
+    width: 5rem;
+    height: 0.25rem;
+    background-color: #209cee;
+    border-radius: 0.25rem;
+}
+
+.image.is-2by1 {
+    padding-top: 50%;
+}
+
+.columns.is-variable.is-6 {
+    --columnGap: 1.5rem;
+}
+
+.card-image:first-child img {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+    background-color: transparent;
+}
+
+.card-content:last-child {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.has-line-through {
+    text-decoration: line-through;
+}
+
+.mx-4 {
+    margin-left: 1rem!important;
+    margin-right: 1rem!important;
+}
+
+.mb-3 {
+    margin-bottom: 0.75rem!important;
+}
+

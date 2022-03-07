@@ -13,3 +13,6 @@ https://vuejsexamples.com/solution-of-challenge-to-build-planet-fact-site-build-
 3. TMovieDB
 https://vuejsexamples.com/tmoviedb-a-movie-search-listing-site-using-vue-js/
 
+4. Bulma Blocks
+https://vuejsexamples.com/bulma-blocks-helps-you-to-create-simple-responsive-websites-within-10-mins/
+

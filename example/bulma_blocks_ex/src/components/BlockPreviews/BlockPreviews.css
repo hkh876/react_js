@@ -1,0 +1,47 @@
+.box a.has-text-primary:hover {
+    color: #00a083!important;
+}
+
+.box .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.has-text-primary-light {
+    color: #ebfffc!important;
+}
+
+.has-text-danger {
+    color: #f14668!important;
+}
+
+.has-text-danger-light {
+    color: #feecf0!important;
+}
+
+.has-text-link {
+    color: #485fc7!important;
+}
+
+.has-text-link-light {
+    color: #eff1fa!important;
+}
+
+.has-text-success {
+    color: #48c78e!important;
+}
+
+.has-text-success-light {
+    color: #effaf5!important;
+}
+
+.is-size-4 {
+    font-size: 1.5rem!important;
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem!important;
+}
