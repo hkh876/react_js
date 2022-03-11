@@ -1,9 +1,10 @@
 # react_js
+
 exercise react
 https://ko.reactjs.org/docs/getting-started.html
 
 # Implementing View JS example with React JS
-example source
+
 1. Nexus Point Car(ds)
 https://vuejsexamples.com/small-project-created-for-nexus-point-using-vue-2-and-scss/
 
@@ -16,3 +17,8 @@ https://vuejsexamples.com/tmoviedb-a-movie-search-listing-site-using-vue-js/
 4. Bulma Blocks
 https://vuejsexamples.com/bulma-blocks-helps-you-to-create-simple-responsive-websites-within-10-mins/
 
+
+# Nomad Coders Example
+
+1. Practice Movie
+https://nomadcoders.co/react-for-beginners
