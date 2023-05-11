@@ -1,0 +1,13 @@
+.choice {
+	margin-top: 10px;
+	font-size: 36px;
+}
+
+.choice input[type="radio"] {
+	width: 30px;
+	height: 30px;
+}
+
+.choice label {
+	margin-left: 30px;
+}

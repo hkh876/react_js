@@ -22,3 +22,7 @@ https://vuejsexamples.com/bulma-blocks-helps-you-to-create-simple-responsive-web
 
 1. Practice Movie
 https://nomadcoders.co/react-for-beginners
+
+# Toy Project
+
+1. Exam Test App

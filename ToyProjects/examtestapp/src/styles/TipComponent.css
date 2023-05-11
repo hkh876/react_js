@@ -1,0 +1,15 @@
+.tip-container {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+}
+
+.tip-content {
+	display: block;
+	font-size: 20px;
+	white-space: pre-line;
+}
+
+.tip-captured-image {
+	object-fit: cover;
+}

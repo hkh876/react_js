@@ -1,0 +1,93 @@
+.Contents {
+  padding-top: 20px;
+  border: 1px solid #000000;
+}
+
+.Question {
+  margin: 20px;
+  font-size: 48px;
+}
+
+.Choice-container {
+  margin: 20px;
+  display: block;
+}
+
+.Choice {
+  margin-top: 10px;
+  font-size: 36px;
+}
+
+.Choice input[type="radio"] {
+  width: 30px;
+  height: 30px;
+}
+
+.Choice label {
+  margin-left: 30px;
+}
+
+.Choice label.Correct {
+  color: #009900;
+}
+
+.Choice label.Incorrect {
+  Color: #ff0000;
+}
+
+.Action-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Submit-button
+{
+  width: 200px;
+  height: 100px;
+  font-size: 20px;
+}
+
+.Next-button {
+  width: 200px;
+  height: 100px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.Tip-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Tip-container-title {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.Tip-content {
+  display: block;
+  font-size: 20px;
+  white-space: pre-line;
+}
+
+.Back-action-container {
+  margin-bottom: 20px;
+  
+}
+
+.Back-action-button {
+  font-size: 40px;
+}
+
+.Passage-image-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Passage-image {
+  border: 1px solid #000000;
+  object-fit: cover;
+}
