@@ -26,3 +26,4 @@ https://nomadcoders.co/react-for-beginners
 # Toy Project
 
 1. Exam Test App
+2. Restaurant Search App
