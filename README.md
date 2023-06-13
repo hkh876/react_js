@@ -30,5 +30,6 @@ https://nomadcoders.co/react-for-beginners
 
 # Lectures
 
-1. gugudan
 웹 게임을 만들며 배우는 React - by 조현영님 in 인프런
+ 1. gugudan
+ 2. numberbaseball
