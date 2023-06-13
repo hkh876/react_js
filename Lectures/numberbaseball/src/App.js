@@ -6,14 +6,14 @@ import './App.css';
 function App() {
   const [result, setResult] = useState('');
   const [inputValue, setInputValue] = useState('');
-  const tries = useRef([]);
+  const [tries, setTries] = useState([]);
   const answer = useRef(getNumbers());
   const refElement = useRef();
   
   const resetGame = () => {
     setResult('');
     setInputValue('');
-    tries.current = [];
+    setTries([]);
     answer.current = getNumbers();
   }
 
@@ -32,16 +32,20 @@ function App() {
     if (strike === 4) {
       alert('홈런! 새 게임을 시작합니다.');
       resetGame();
+    } else if (tries.length >= 9) {
+      alert('실패! 정답은 ' + answer.current.join('') + ' 입니다. 새 게임을 시작합니다.');
+      resetGame();
     } else {
       const result = strike + ' 스트라이크, ' + ball + ' 볼';
-      tries.current = [
-        ...tries.current,
-        {
-          tryInput: source,
-          tryResult: result
-        }
-      ];
-      
+      setTries((prevTries) => {
+        return [
+          ...prevTries,
+          {
+            tryInput: source,
+            tryResult: result
+          }
+        ]
+      });
       setResult(result);
       setInputValue('');
       refElement.current.focus();
@@ -63,10 +67,10 @@ function App() {
       <form onSubmit={inputOnSubmit}>
         <input type="text" pattern="\d*" maxLength={4} value={inputValue} onChange={inputOnChange} ref={refElement}/>
       </form>
-      <span>시도 : {tries.current.length}</span>
-      { tries.current.map((value, index) => {
+      <span>시도 : {tries.length}</span>
+      { tries.map((value, index) => {
         return (
-          <TryHistory key={index} try={value}/>
+          <TryHistory key={index} try={value} />
         )
       }) }
     </>
