@@ -7,14 +7,14 @@ function App() {
   const [result, setResult] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [tries, setTries] = useState([]);
-  const answer = useRef(getNumbers());
+  const [answer, setAnswer] = useState(getNumbers); // lazy init
   const refElement = useRef();
   
   const resetGame = () => {
     setResult('');
     setInputValue('');
     setTries([]);
-    answer.current = getNumbers();
+    setAnswer(getNumbers());
   }
 
   const displayAnswer = (source, target) => {
@@ -33,7 +33,7 @@ function App() {
       alert('홈런! 새 게임을 시작합니다.');
       resetGame();
     } else if (tries.length >= 9) {
-      alert('실패! 정답은 ' + answer.current.join('') + ' 입니다. 새 게임을 시작합니다.');
+      alert('실패! 정답은 ' + answer.join('') + ' 입니다. 새 게임을 시작합니다.');
       resetGame();
     } else {
       const result = strike + ' 스트라이크, ' + ball + ' 볼';
@@ -54,7 +54,7 @@ function App() {
 
   const inputOnSubmit = (e) => {
     e.preventDefault();
-    displayAnswer(inputValue, answer.current);
+    displayAnswer(inputValue, answer);
   }
 
   const inputOnChange = (e) => {
