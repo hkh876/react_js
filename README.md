@@ -27,3 +27,8 @@ https://nomadcoders.co/react-for-beginners
 
 1. Exam Test App
 2. Restaurant Search App
+
+# Lectures
+
+1. gugudan
+웹 게임을 만들며 배우는 React - by 조현영님 in 인프런
