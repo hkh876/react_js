@@ -35,3 +35,4 @@ https://nomadcoders.co/react-for-beginners
  2. numberbaseball
  3. responsecheck
  4. gawebawebo
+ 5. lotto
