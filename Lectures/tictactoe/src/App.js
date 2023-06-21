@@ -36,9 +36,7 @@ const reducer = (state, action) => {
         currentCell: [-1, -1]
       }
     default:
-      return {
-        ...state
-      };
+      return state;
   };
 };
 
