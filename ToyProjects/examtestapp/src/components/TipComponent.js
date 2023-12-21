@@ -3,25 +3,30 @@ import "../styles/TipComponent.css"
 
 function TipComponent(props) {
     const tipView = props.choices.map((value, index) => {
-        if (value.capturedTip) {
-            const capturedImageUrl = STATIC_SERVER_DOMAIN + value.imageUrl
-            return <img key={index} className="tip-captured-image" src={capturedImageUrl} alt="This is captured"></img>    
-        } else {
-            let tipString = '';
-            if (value.tip !== '') {
-                if (index === 0) {
-                    tipString += '① ';
-                } else if (index === 1) {
-                    tipString += '② ';
-                } else if (index === 2) {
-                    tipString += '③ ';
-                } else if (index === 3) {
-                    tipString += '④ ';
+        if (value.hasTip) {
+            if (value.capturedTip) {
+                const capturedImageUrl = STATIC_SERVER_DOMAIN + value.tipUrl
+                return <img key={index} className="tip-captured-image" src={capturedImageUrl} alt="This is captured"></img>    
+            } else {
+                let tipString = '';
+                if (value.tip !== '') {
+                    if (index === 0) {
+                        tipString += '① ';
+                    } else if (index === 1) {
+                        tipString += '② ';
+                    } else if (index === 2) {
+                        tipString += '③ ';
+                    } else if (index === 3) {
+                        tipString += '④ ';
+                    }
+                    
+                    tipString += value.tip;
                 }
-                
-                tipString += value.tip;
+                return <span className="tip-content" key={index}>{tipString}</span>
             }
-            return <span className="tip-content" key={index}>{tipString}</span>
+        }
+        else {
+            return null
         }
     });
     return (

@@ -1,32 +1,32 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { STATIC_GET_BARISTA2_EXAM_API } from "../statics/StaticValues";
-import "../styles/SavedQuestion.css"
+import { STATIC_GET_BARISTA2_EXAM_LIST_API } from "../statics/StaticValues";
+import { Shuffle } from "../Utils";
 import CommonQuestion from "./CommonQuestion";
-import { useParams } from "react-router-dom";
 
-function SavedQuestion(props) {
+function Barista2Question(props) {
     const [examList, setExamList] = useState([])
-    let { examId } = useParams()
     const parameters = {
         "examList": examList,
-        "saved": true,
     }
-    
+
     useEffect(() => {
-        axios.get(STATIC_GET_BARISTA2_EXAM_API + '?id=' + examId)
+        axios.get(STATIC_GET_BARISTA2_EXAM_LIST_API)
         .then(
             response => {
-                const exams = response.data.data
-                setExamList([exams])
+                const exams = response.data.dataList
+                let shuffledList = exams
+
+                Shuffle(shuffledList)
+                setExamList(shuffledList)
             }
         ).catch(error => console.error(error))
-    }, [examId])
+    }, [])
 
     const onBackClick = () => {
         props.navigateHook(-1)
     }
- 
+
     const events = {
         "onBackClick": () => { onBackClick() },
     }
@@ -36,4 +36,4 @@ function SavedQuestion(props) {
     )
 }
 
-export default SavedQuestion;
+export default Barista2Question;

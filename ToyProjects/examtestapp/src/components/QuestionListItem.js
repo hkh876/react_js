@@ -5,7 +5,7 @@ function QuestionListItem(props) {
 
     return (
         <div className="question-item-container margin-bottom-10" onClick={props.onItemClick}>
-            <span className="question-item-title">{props.indexNumber + '. ' + item.question}</span>
+            <span className="question-item-title">{props.indexNumber + '. ' + item.title}</span>
             <button className="question-item-delete-button min-width-70" onClick={props.onItemDeleteClick}>삭제하기</button>
         </div>
     )

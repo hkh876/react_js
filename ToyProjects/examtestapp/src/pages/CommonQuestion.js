@@ -20,7 +20,7 @@ function CommonQuestion(props) {
     const examList = parameters.examList
     let examIndex = questionIndex.current - 1
     const currentExam = examList.length > 0 ? examList[examIndex] : null
-    
+
     // Event
     const onSubmitClick = () => {
         let checked = false
@@ -28,7 +28,7 @@ function CommonQuestion(props) {
             const elementValue = Number(element.value)
             if (element.checked) {
                 checked = true
-                if (elementValue === currentExam.correctNumber) {
+                if (elementValue === currentExam.answer) {
                     correctCount.current += 1
                 } else {
                     incorrectCount.current += 1
@@ -54,7 +54,7 @@ function CommonQuestion(props) {
     }
 
     if (currentExam != null) {
-        const passageImageUrl = STATIC_SERVER_DOMAIN + currentExam.imageUrl
+        const passageUrl = STATIC_SERVER_DOMAIN + currentExam.passageUrl
 
         // initialize
         if (!resultState) {
@@ -75,7 +75,7 @@ function CommonQuestion(props) {
                 indexNumber={index + 1}
                 result={resultState}
                 radioInputRef={radioInputRef}
-                correctNumber={currentExam.correctNumber}
+                correctNumber={currentExam.answer}
             ></RadioButton>
         })
 
@@ -95,10 +95,10 @@ function CommonQuestion(props) {
                     </div>
                 </div>
                 <div className="question-contents">
-                    <span className="question">{ questionIndex.current + ". " + currentExam.question }</span>
+                    <span className="question">{ questionIndex.current + ". " + currentExam.title }</span>
                     { currentExam.hasPassage && (
                         <div className="passage-image-container">
-                            <img className="passage-image" src={passageImageUrl} alt="This is passage"></img>
+                            <img className="passage-image" src={passageUrl} alt="This is passage"></img>
                         </div>
                     )}
                     <div className="choice-container">
@@ -106,7 +106,7 @@ function CommonQuestion(props) {
                     </div>
                 </div>
                 <div className="action-container">
-                    { parameters.isSaved === true ? <DeleteButton exam={currentExam}></DeleteButton> : <SaveButton exam={currentExam}></SaveButton> }
+                    { parameters.saved === true ? <DeleteButton exam={currentExam}></DeleteButton> : <SaveButton exam={currentExam}></SaveButton> }
                     <button className="font-size-30 padding-all-40" onClick={ () => onSubmitClick() }>제출하기</button>
                     { resultState ? <button className="font-size-30 padding-all-40 margin-left-20" onClick={ ()=> onNextClick() }>다음문제</button> : null }
                 </div>

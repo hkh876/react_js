@@ -4,10 +4,12 @@ import './App.css';
 import { SetDefaultScreenSize } from './Utils.js';
 import Home from './pages/Home.js';
 import ExamHome from './pages/ExamHome.js'
+import SavedExamHome from './pages/SavedExamHome.js'
 import PastQuestion from './pages/PastQuestion.js';
 import SavedQuestion from './pages/SavedQuestion.js';
 import ExpectationQuestion from './pages/ExpectationQuestion.js'
 import SavedListQuestion from './pages/SavedListQuestion';
+import Barista2Question from './pages/Barista2Question.js';
 
 function App() {
     const navigateHook = useNavigate();
@@ -22,10 +24,12 @@ function App() {
               <Routes>
                   <Route path="/" element={<Home navigateHook={navigateHook}></Home>}/>
                   <Route path="/exam" element={<ExamHome navigateHook={navigateHook}></ExamHome>}/>
+                  <Route path="/exam/saved" element={<SavedExamHome navigateHook={navigateHook}></SavedExamHome>}/>
                   <Route path="/exam/pastQuestion" element={<PastQuestion navigateHook={navigateHook}></PastQuestion>}/>
                   <Route path="/exam/savedQuestion" element={<SavedListQuestion navigateHook={navigateHook}></SavedListQuestion>}/>
                   <Route path="/exam/savedQuestion/:examId" element={<SavedQuestion navigateHook={navigateHook}></SavedQuestion>}></Route>
                   <Route path="/exam/expectationQuestion" element={<ExpectationQuestion navigateHook={navigateHook}></ExpectationQuestion>}/>
+                  <Route path="/exam/barista2" element={<Barista2Question navigateHook={navigateHook}></Barista2Question>}/>
               </Routes>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { STATIC_DELETE_EXAM_CONFIRM_TEXT, STATIC_EXAMS_API, STATIC_GET_SAVED_EXAM_API, STATIC_SAVED_QUESTION_URL } from "../statics/StaticValues"
+import { STATIC_DELETE_EXAM_CONFIRM_TEXT, STATIC_EXAMS_API, STATIC_GET_BARISTA2_SAVED_EXAM_LIST_API, STATIC_SAVED_QUESTION_URL } from "../statics/StaticValues"
 import QuestionListItem from "../components/QuestionListItem"
 import NotFoundComponents from "../components/NotFoundComponent"
 
@@ -8,10 +8,10 @@ function SavedListQuestion(props) {
     const [examList, setExamList] = useState([])
 
     useEffect(() => {
-        axios.get(STATIC_GET_SAVED_EXAM_API)
+        axios.get(STATIC_GET_BARISTA2_SAVED_EXAM_LIST_API)
         .then(
             response => {
-                const exams = response.data
+                const exams = response.data.dataList
                 setExamList(exams)
             }
         ).catch(error => console.error(error))
@@ -30,7 +30,7 @@ function SavedListQuestion(props) {
             e.stopPropagation();
     
             if (window.confirm(STATIC_DELETE_EXAM_CONFIRM_TEXT) === true) {
-                const requestBody = { "save_status": false };
+                const requestBody = { "saved": false };
     
                 axios.patch(
                     STATIC_EXAMS_API + '/' + examId, 
